@@ -21,11 +21,9 @@ public class Programa {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		//expressao declarada
-		Consumer<Product> cons = item -> item.setPreco(item.getPreco() * 1.1);
 		
-		//ao invés de chamar o método chamaremos a cons
-		list.forEach(cons);
+		//expressão inline, passada diretamente como parâmetro
+		list.forEach(prod -> prod.setPreco(prod.getPreco() * 1.1));
 		
 		//Método println chamado por referencia de método
 		list.forEach(System.out::println);
