@@ -21,8 +21,8 @@ public class Programa {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		//referencia para o método estático de atualização
-		list.forEach(Product::staticAtualizaPreco);
+		//referencia para o método NÃO estático de atualização
+		list.forEach(Product::naoStaticAtualizaPreco);
 		
 		//Método println chamado por referencia de método
 		list.forEach(System.out::println);
