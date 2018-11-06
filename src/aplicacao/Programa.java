@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Product;
+import util.AtualizaPreco;
 
 /*
  * Programa que, a partir de uma lista de produtos, 
@@ -19,6 +20,12 @@ public class Programa {
 		list.add(new Product("Mouse", 50.00));
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
+		
+		//forEach percorre a lista atualizando o valor com o Consumer
+		list.forEach(new AtualizaPreco());
+		
+		//Método println chamado por referencia de método
+		list.forEach(System.out::println);
 
 	}
 	
