@@ -25,6 +25,10 @@ public class Product {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
+	
+	public static void staticAtualizaPreco(Product p) {
+		p.setPreco(p.getPreco() * 1.1);	
+	}
 
 	@Override
 	public String toString() {
